@@ -4,6 +4,10 @@ class Calculator(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.geometry("400x600")
+        if os.path.exists("calculator.ico"):
+            self.iconbitmap('calculator.ico')
+        else:
+            self.iconbitmap("Calculator/calculator.ico")
         self.iconbitmap("calculator.ico")
         self.resizable(False, False)
         self.title("Calculator")
